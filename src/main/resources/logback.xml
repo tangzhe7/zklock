@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<contextName>logback</contextName>
+
+
+
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				<!-- %d{yyyy-MM-dd HH:mm:sss} [%thread] %-5level %C{1} -%msg%n -->
+				%d{yyyy-MM-dd HH:mm:sss} %-5level %C{1} -%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+
+	<logger name="org" level="DEBUG" additivity="false">
+		<appender-ref ref="console" />
+	</logger>
+
+</configuration>
